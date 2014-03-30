@@ -4,6 +4,7 @@
 	<% @todo_list.todo_items.each do |todo_items| %>
 		<li id="<%= dom_id(todo_items) %>">
 			<%= todo_items.content %>
+			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_items), method: :patch %>
 			<%= link_to "Edit", edit_todo_list_todo_item_path(todo_items) %>
 			<%= link_to "Delete",  todo_list_todo_item_path(todo_items), method: :delete, data: { confirm: "Are you sure?" } %>
 		</li>
