@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Todo</title>
+  <title>Odot</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-	<div class="nav">
-		<h1><%= link_to "Todo", root_path %></h1>
-		<ul>
-			<li><%= link_to "Todo Lists", todo_lists_path %></li>
-		</ul>
-	</div>
+  <div class="nav">
+    <h1><%= link_to "Odot", root_path %></h1>
+    <ul>
+      <li><%= link_to "Todo Lists", todo_lists_path %></li>
+    </ul>
+    <br class="clear" />
+  </div>
 
-	<% flash.each do |type, message| %>
-	<div class="alert flash <%= type %>">
-		<%= message %>
-	</div>
-	<% end %>
+  <% flash.each do |type, message| %>
+  <div class="alert flash <%= type %>">
+    <%= message %>
+  </div>
+  <% end %>
 
 <%= yield %>
 
